@@ -1,0 +1,7 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Acme Water handbook: hand written HTML and CSS, no build step.",
+  "license": "MIT"
+}
