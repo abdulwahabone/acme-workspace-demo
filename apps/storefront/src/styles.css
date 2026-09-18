@@ -84,7 +84,7 @@ a {
 .site-header__inner {
   display: flex;
   align-items: center;
-  gap: var(--acme-space-6);
+  gap: var(--acme-space-3);
   max-width: var(--sf-page-width);
   margin: 0 auto;
   padding: var(--acme-space-3) var(--sf-gutter);
