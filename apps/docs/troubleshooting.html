@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>When something looks wrong — Acme Water handbook</title>
+    <meta name="description" content="Slow flow, black bits, drips: what they mean and what to do." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="layout">
+      <aside class="side">
+        <div class="side__brand">
+          <span class="side__name">Acme Water</span>
+          <span class="side__sub">Handbook</span>
+        </div>
+
+        <nav aria-label="Handbook">
+          <ol class="side__nav">
+            <li><a class="side__link" href="index.html">Choosing a filter</a></li>
+            <li><a class="side__link" href="fitting.html">Fitting and first use</a></li>
+            <li><a class="side__link side__link--current" href="troubleshooting.html">When something looks wrong</a></li>
+          </ol>
+        </nav>
+
+        <p class="side__note">
+          Written for a demo shop. Nothing here describes a real product, and no
+          page loads anything from the internet.
+        </p>
+      </aside>
+
+      <main class="doc" id="main">
+        <p class="doc__kicker">If it goes wrong</p>
+        <h1 class="doc__title">When something looks wrong</h1>
+        <p class="doc__lead">
+          Most of what gets reported in the first week is normal, and the rest is
+          usually a cartridge that has not seated. Here is how to tell them
+          apart.
+        </p>
+
+        <h2>Black specks in the first jug</h2>
+        <p>
+          Carbon dust. It is harmless and it is why the fitting page says to
+          throw the first two jugs away. If specks are still coming through after
+          five litres, the cartridge has split and should be replaced.
+        </p>
+
+        <h2>The flow has slowed to a trickle</h2>
+        <p>
+          Sediment has blocked the first stage. On a jug that means the cartridge
+          is at the end of its life; on an Undersink Duo it usually means the
+          5 micron stage, not the carbon one.
+        </p>
+        <pre class="code"><code>slow, and water tastes fine   --&gt; sediment stage
+slow, and water tastes of chlorine --&gt; both stages</code></pre>
+
+        <h2>The Tap Clip drips where it meets the spout</h2>
+        <ol class="steps">
+          <li>Turn the tap off and unscrew the housing by hand.</li>
+          <li>Check the rubber collar is the right one; a 16 mm collar on a 22 mm spout will always weep.</li>
+          <li>Refit hand tight. If it still drips, the spout thread is worn, and no clamp will fix that.</li>
+        </ol>
+
+        <div class="callout callout--warn">
+          <p class="callout__title">Water where it should not be</p>
+          <p>
+            A puddle in the cupboard under the sink is not a filter problem to
+            work through page by page. Turn the cold feed off first, then look.
+          </p>
+        </div>
+
+        <h2>The cartridge will not click in</h2>
+        <p>
+          The Ripple Pitcher and the Carafe Mini take different cartridges. The
+          Mini is 20 mm shorter and will drop straight through a Ripple funnel;
+          the full size Cascade will not seat in a Carafe at all. Check the
+          sleeve before you push harder.
+        </p>
+
+        <h2>Limescale came back after a month</h2>
+        <p>
+          A jug or a tap filter treats the water you drink, not the water the
+          boiler heats. If the kettle is scaling, the filter has to be on the
+          rising main. See
+          <a href="index.html">Choosing a filter</a> for which one that is.
+        </p>
+
+        <h2>Still stuck</h2>
+        <p>
+          There is no support desk. This is a demo shop in a demo repository, and
+          the filters do not exist.
+        </p>
+
+        <nav class="pager" aria-label="Handbook pages">
+          <a class="pager__prev" href="fitting.html">
+            <span class="pager__label">Previous</span>
+            <span class="pager__title">Fitting and first use</span>
+          </a>
+          <span class="pager__spacer"></span>
+        </nav>
+      </main>
+    </div>
+  </body>
+</html>
