@@ -6,6 +6,37 @@ import { formatPrice } from '../catalog.js';
 const DELIVERY = 3.95;
 const FREE_DELIVERY_OVER = 40;
 
+function EmptyBasket() {
+  return (
+    <div className="empty">
+      <svg className="empty__art" viewBox="0 0 120 80" aria-hidden="true">
+        <path
+          d="M18 26h84l-8 42a10 10 0 0 1-10 8H36a10 10 0 0 1-10-8Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M44 26 54 8M76 26 66 8"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+      </svg>
+      <h2 className="empty__title">Your basket is empty</h2>
+      <p className="empty__body">
+        Nothing has been added yet. The jug is the usual place to start, and it is the cheapest
+        thing to run.
+      </p>
+      <Link className="button button--primary" to="/products">
+        Browse the filters
+      </Link>
+    </div>
+  );
+}
+
 export default function Cart() {
   const { lines, setQuantity, removeItem, subtotal } = useCart();
   const delivery = subtotal >= FREE_DELIVERY_OVER ? 0 : DELIVERY;
@@ -17,6 +48,9 @@ export default function Cart() {
         <p className="page__lead">Nothing is charged. This shop is a demo.</p>
       </header>
 
+      {lines.length === 0 && <EmptyBasket />}
+
+      {lines.length > 0 && (
       <div className="basket">
         <table className="basket__table">
           <thead>
@@ -97,6 +131,7 @@ export default function Cart() {
           </p>
         </aside>
       </div>
+      )}
     </section>
   );
 }
