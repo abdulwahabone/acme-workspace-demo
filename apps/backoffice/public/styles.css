@@ -283,7 +283,7 @@ a {
 }
 
 .table th {
-  padding: var(--acme-space-3) var(--acme-space-4);
+  padding: var(--acme-space-2) var(--acme-space-4);
   border-bottom: 1px solid var(--acme-color-line);
   background: #f8fafc;
   color: var(--acme-color-ink-muted);
@@ -294,7 +294,7 @@ a {
 }
 
 .table td {
-  padding: var(--acme-space-4);
+  padding: var(--acme-space-3) var(--acme-space-4);
   border-bottom: 1px solid var(--acme-color-line);
   vertical-align: middle;
 }
