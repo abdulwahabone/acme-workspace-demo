@@ -736,6 +736,33 @@ a {
   font-size: var(--acme-text-xs);
 }
 
+/* ----------------------------------------------------------- empty state */
+
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: var(--acme-space-3);
+  padding: var(--acme-space-8) var(--acme-space-5);
+  border: 1px dashed var(--acme-color-line);
+  border-radius: var(--acme-radius-lg);
+  background: var(--acme-color-canvas);
+  text-align: center;
+}
+
+.empty__art {
+  width: 96px;
+  height: 64px;
+  color: var(--acme-color-brand-300);
+}
+
+.empty__title {
+  font-size: var(--acme-text-lg);
+}
+
+.empty__body {
+  max-width: 40ch;
+}
+
 /* --------------------------------------------------------------- buttons */
 
 .button {
