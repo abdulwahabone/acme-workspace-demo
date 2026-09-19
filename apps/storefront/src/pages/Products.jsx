@@ -5,6 +5,22 @@ import { useCart } from '../cart.jsx';
 import { categories, formatPrice, products } from '../catalog.js';
 import { ProductArt } from '../components/art.jsx';
 
+const FREE_DELIVERY_OVER = 40;
+
+/** One badge per card, and stock always wins over the delivery nudge. */
+function badgeFor(product) {
+  if (product.stock === 0) {
+    return { label: 'Out of stock', variant: 'out' };
+  }
+  if (product.stock <= 3) {
+    return { label: `Only ${product.stock} left`, variant: 'low' };
+  }
+  if (product.price >= FREE_DELIVERY_OVER) {
+    return { label: 'Free delivery', variant: 'delivery' };
+  }
+  return null;
+}
+
 export default function Products() {
   const [category, setCategory] = useState('All');
   const { addItem } = useCart();
@@ -39,10 +55,14 @@ export default function Products() {
       </p>
 
       <ul className="card-grid">
-        {shown.map((product) => (
+        {shown.map((product) => {
+          const badge = badgeFor(product);
+
+          return (
           <li key={product.id} className="card">
             <Link className="card__art" to={`/products/${product.id}`}>
               <ProductArt kind={product.art} />
+              {badge && <span className={`card__badge card__badge--${badge.variant}`}>{badge.label}</span>}
             </Link>
 
             <div className="card__body">
@@ -52,7 +72,10 @@ export default function Products() {
                 </Link>
               </h2>
               <p className="card__tagline">{product.tagline}</p>
-              <p className="card__price">{formatPrice(product.price)}</p>
+              <p className="card__price">
+                {formatPrice(product.price)}
+                <span className="card__category">{product.category}</span>
+              </p>
             </div>
 
             <div className="card__footer">
@@ -66,7 +89,8 @@ export default function Products() {
               </button>
             </div>
           </li>
-        ))}
+          );
+        })}
       </ul>
     </section>
   );
