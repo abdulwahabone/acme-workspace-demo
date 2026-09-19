@@ -10,7 +10,7 @@
 :root {
   --sf-page-width: 1120px;
   --sf-gutter: var(--acme-space-5);
-  --sf-accent: #c026d3;
+  --sf-accent: #be185d;
   --sf-accent-dark: var(--acme-color-brand-700);
   --sf-body: var(--acme-color-ink-muted);
   --sf-heading: var(--acme-color-ink);
